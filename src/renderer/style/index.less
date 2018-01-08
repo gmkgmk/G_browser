@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#webviews {
+  height: "calc(100vh - 50px)";
+  position: relative;
+
+  webview {
+    height: 100%;
+    width: 100%;
+    transform: translateX(0); 
+    position: absolute;
+    background: #fff;
+    outline: none;
+    z-index: 10;
+    &.hidden {
+      display: flex;
+      // 在下面而不是隐藏 
+      z-index: 5;
+    }
+    &.will-hide.hidden {
+      display: flex;
+      visibility: hidden;
+    }
+  }
+}
+.controller {
+  display: flex;
+  height: 50px;
+  /* line-height: 50px; */
+  background: #f1f1f1;
+  justify-content: flex-start;
+  align-items: center;
+  .forbadeClick {
+    color: #d3d3d3;
+  }
+  .forbadeClick:hover {
+    background: #f1f1f1;
+    cursor: default;
+  }
+  .serachBox {
+    width: 1060px;
+    height: 28px;
+    position: relative;
+  }
+  .searchInput {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px 5px 30px;
+  }
+  .searchIcon {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+  }
+}
+.controllerList {
+  width: 126px;
+  margin-left: 19px;
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    &:hover {
+      cursor: pointer;
+      background: #dfdfdf;
+      transition: all 0.2s;
+    }
+  }
+}
+.navTab {
+}

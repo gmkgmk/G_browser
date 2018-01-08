@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>webview</title>
+  <link rel="stylesheet" type="text/css" href="../../static/font/iconfont.css">
+  <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+  <!-- style="-webkit-app-region: drag" -->
+  <!-- <section id="navTab" class="navTab">
+    <nav>
+      <div class="foo">标签一</div>
+      <div class="foo1">标签二</div>
+      <div class="foo2">标签三</div>
+    </nav>
+  </section> -->
+  <header id="controller" class="controller">
+    <nav class="controllerList">
+      <ul>
+        <li id="back" title="点击可后退">
+          <i class="BTicon browser-back"></i>
+        </li>
+        <li id="forward" title="点击可前进">
+          <i class="BTicon  browser-forward"></i>
+        </li>
+        <li id="refresh" title="重新加载此页">
+          <i class="BTicon  browser-refresh"></i>
+        </li>
+        <li id="home" title="返回首页">
+          <i class="BTicon  browser-home"></i>
+        </li>
+      </ul>
+    </nav>
+    <div class="serachBox">
+      <i class="BTicon   browser-search searchIcon" id="goUrl"></i>
+      <input type="text" id="searchInput" class="searchInput">
+    </div>
+    <div>
+      <nav class="controllerList">
+        <ul>
+          <li id="clearHistory" title="清除历史导航">
+            <i class="BTicon  browser-clear"></i>
+          </li>
+          <li id="openDevTools" title="打开调试窗口">
+            <i class="BTicon  browser-openDev"></i>
+          </li>
+          <li id="printPDF" title="打印PDF">
+            <i class="BTicon  browser-printPDF"></i>
+          </li>
+          <li id="clearCachae" title="清除缓存">
+            <i class="BTicon  browser-printPDF"></i>
+          </li>
+          <li id="moreBtn" title="更多">
+            <i class="BTicon  browser-more"></i>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <section id="webviews">
+    <webview id="foo" src="https://bdp.belle.net.cn/"></webview>
+  </section>
+  <script src="index.js"></script>
+  <!-- <script>
+    const fooTab1 = document.querySelector(".foo")
+    const fooTab2 = document.querySelector(".foo1")
+    const fooTab3 = document.querySelector(".foo2")
+
+    const foo = document.querySelector("#foo")
+    const foo1 = document.querySelector("#foo1")
+    const foo2 = document.querySelector("#foo2")
+    fooTab1.onclick = function () {
+      foo1.style.display = 'none'
+      foo.style.display = 'block'
+      foo2.style.display = 'none'
+    }
+    fooTab2.onclick = function () {
+      foo.style.display = 'none'
+      foo1.style.display = 'block'
+      foo2.style.display = 'none'
+    }
+    fooTab3.onclick = function () {
+      foo.style.display = 'none'
+      foo2.style.display = 'block'
+      foo1.style.display = 'none'
+    }
+  </script> -->
+</body>
+
+</html>

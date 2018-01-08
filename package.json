@@ -1,0 +1,64 @@
+{
+  "name": "belle",
+  "main": "src/main/index.js",
+  "version": "0.1.0",
+  "author": "belle",
+  "description": "browser",
+  "keywords": [
+    "electron",
+    "updater",
+    "electron-builder",
+    "windows",
+    "electron-native",
+    "update",
+    "desktop"
+  ],
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "start": "electron . ",
+    "build": "build --win",
+    "ship": "build --win  -p always"
+  },
+  "dependencies": {
+    "electron-fetch": "^1.1.0",
+    "md5": "^2.2.1",
+    "electron-log": "^2.2.13",
+    "electron-webpack": "^1.11.0",
+    "electron-updater": "^2.16.1",
+    "source-map-support": "^0.5.0"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "webpackConfig": "webpack.renderer.additions.js"
+    }
+  },
+  "build": {
+    "appId": "com.browser",
+    "electronVersion": "1.7.9",
+    "productName": "测试",
+    "asar": false,
+    "publish": {
+      "provider": "generic",
+      "url": "https://172.22.128.1:8080"
+    },
+    "nsis": {
+      "artifactName": "测试.${ext}",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": true,
+      "installerLanguages": "zh_CN",
+      "language": 2052,
+      "perMachine": true
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}
